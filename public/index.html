@@ -175,7 +175,7 @@
                                 try {
                                     let market = markets[trade.symbol]
                                     let leverage = Math.min(maxLeverage, market.info.maxLeverage)
-                                    await userAccount.set_margin_mode('cross', trade.symbol, params = {leverage: leverage})
+                                    await userAccount.set_margin_mode('isolated', trade.symbol, params = {leverage: leverage})
                                 } catch (e) {
                                     console.log('set_margin_mode error', e.toString())
                                 }
